@@ -1,124 +1,85 @@
+<div align="center">
+
 # ⚛️ Learn React
 
-> A hands-on repository documenting my journey of learning React, from the fundamentals to advanced concepts through practical projects and exercises.
+**A hands-on repository documenting my journey through React — from fundamentals to production-ready applications.**
+
+![Status](https://img.shields.io/badge/Status-In_Progress-00ff88?style=for-the-badge)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-Bundler-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+Part of my **[60 Days Frontend Challenge](https://github.com/mohammad43268/60-days-frontend-challenge)**
+
+</div>
 
 ---
 
 ## 📖 About
 
-This repository contains my React learning journey, following a structured course and additional hands-on practice.
-
-Rather than only reading documentation, I focus on building projects, experimenting with concepts, and writing clean, maintainable code to strengthen my understanding of React.
+This repo is not a course clone. It's where I break React down myself — build small, focused exercises for every concept, then use it inside a real project the same day. No copy-paste. If I can't explain a line, it doesn't get committed.
 
 ---
 
-## 🚀 Topics Covered
+## ✅ Progress
 
-- ✅ JSX
-- ✅ Components
-- ✅ Props
-- ✅ State (`useState`)
-- ✅ Event Handling
-- ✅ Conditional Rendering
-- ✅ Lists & Keys
-- ✅ Forms
-- ✅ React Router
-- ⏳ `useEffect`
-- ⏳ Context API
-- ⏳ Custom Hooks
-- ⏳ API Integration
-- ⏳ Performance Optimization
-- ⏳ Authentication
-- ⏳ State Management
-- ⏳ Deployment
+| Status | Topic |
+|:---:|---|
+| ✅ | JSX |
+| ✅ | Components |
+| ✅ | Props |
+| ✅ | State (`useState`) |
+| ✅ | Event Handling |
+| ✅ | Conditional Rendering |
+| ✅ | Lists & Keys |
+| ✅ | Forms |
+| ✅ | React Router |
+| 🔄 | `useEffect` |
+| ⬜ | Context API |
+| ⬜ | Custom Hooks |
+| ⬜ | API Integration |
+| ⬜ | Performance Optimization |
+| ⬜ | Authentication |
+| ⬜ | State Management |
+| ⬜ | Deployment |
 
----
-
-## 📂 Repository Structure
-
-This repository is organized according to the course curriculum. Each section contains source code, exercises, mini-projects, and notes related to that topic.
-
-```
-learn-react/
-│
-├── Module-01/
-├── Module-02/
-├── Module-03/
-├── ...
-└── README.md
-```
-
-> Folder names and structure may evolve as I progress through the course.
-
----
-
-## 🛠️ Tech Stack
-
-- React
-- JavaScript (ES6+)
-- Vite
-- HTML5
-- CSS3
-- Git
-- GitHub
+**8 / 17 core concepts done.**
 
 ---
 
 ## 🎯 Goals
 
-- Build a solid understanding of React fundamentals
-- Master modern React Hooks
-- Create reusable and scalable components
-- Learn client-side routing
-- Work with APIs
-- Understand state management
-- Follow React best practices
-- Build production-ready applications
+- Build a genuinely solid understanding of React fundamentals — not tutorial-deep, interview-deep
+- Master modern Hooks and know *why*, not just *how*
+- Write reusable, scalable components
+- Get comfortable with routing, forms, and API-driven UIs
+- Ship a production-ready project by the end of this repo
 
 ---
 
-## 📈 Learning Progress
+## 🗂️ Structure
+learn-react/
+│
+├── Module-01-jsx-components/
+├── Module-02-props-state/
+├── Module-03-events-conditional/
+├── Module-04-lists-forms/
+├── Module-05-router/
+├── ...
+└── README.md
 
-| Status | Topic |
-| :---: | -------------------------- |
-| ✅ | JSX |
-| ✅ | Components |
-| ✅ | Props |
-| ✅ | useState |
-| ✅ | React Router |
-| ⏳ | useEffect |
-| ⏳ | Context API |
-| ⏳ | Custom Hooks |
-| ⏳ | API Integration |
-| ⏳ | Authentication |
-| ⏳ | Deployment |
+Each module folder has its own mini-project or exercise set for that topic. Structure will grow as I go.
 
 ---
 
-## 💡 Purpose
+## 🛠️ Tech Stack
 
-This repository serves as my personal React knowledge base and development journal. It allows me to:
-
-- Track my learning progress
-- Practice Git and GitHub workflows
-- Revisit React concepts quickly
-- Build practical applications
-- Continuously improve my frontend development skills
+`React` · `JavaScript (ES6+)` · `Vite` · `HTML5` · `CSS3` · `Git` · `GitHub`
 
 ---
 
-## 📚 Learning Resources
+## 🔗 Connect
 
-- Official React Documentation
-- Course materials
-- Personal experiments and practice projects
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/mohammad43268)
+[![Main Challenge](https://img.shields.io/badge/60_Day_Challenge-View-00ff88?style=flat-square)](https://github.com/mohammad43268/60-days-frontend-challenge)
 
----
-
-## 🤝 Contributions
-
-This repository is primarily for learning purposes. Suggestions, improvements, and constructive feedback are always welcome.
-
----
-
-### ⭐ If you find this repository helpful, consider giving it a star.
+<p align="center"><sub>Built with consistency, not motivation.</sub></p>
