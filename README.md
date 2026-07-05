@@ -42,7 +42,6 @@ This repo is not a course clone. It's where I break React down myself — build 
 | ✅ | State Management |
 | ✅ | Deployment |
 
-**8 / 17 core concepts done.**
 
 ---
 
