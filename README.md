@@ -33,14 +33,14 @@ This repo is not a course clone. It's where I break React down myself — build 
 | ✅ | Lists & Keys |
 | ✅ | Forms |
 | ✅ | React Router |
-| 🔄 | `useEffect` |
-| ⬜ | Context API |
-| ⬜ | Custom Hooks |
-| ⬜ | API Integration |
-| ⬜ | Performance Optimization |
-| ⬜ | Authentication |
-| ⬜ | State Management |
-| ⬜ | Deployment |
+| ✅ | `useEffect` |
+| ✅ | Context API |
+| ✅ | Custom Hooks |
+| ✅ | API Integration |
+| ✅ | Performance Optimization |
+| ✅ | Authentication |
+| ✅ | State Management |
+| ✅ | Deployment |
 
 **8 / 17 core concepts done.**
 
