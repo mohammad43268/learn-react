@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A comprehensive HTML code example featuring all major tags." />
+    <title>The Complete HTML Tag Showcase</title>
+
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header,
+      nav,
+      main,
+      section,
+      article,
+      aside,
+      footer {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      nav a {
+        margin-right: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      blockquote {
+        border-left: 4px solid #007bff;
+        margin: 0;
+        padding-left: 15px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Main Website Title (h1)</h1>
+      <p>Welcome to the ultimate HTML element reference guide.</p>
+      <nav>
+        <a href="#text">Text Formatting</a>
+        <a href="#lists">Lists</a>
+        <a href="#media">Media</a>
+        <a href="#tables">Tables</a>
+        <a href="#forms">Forms</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="text">
+        <h2>Text Formatting & Headings (h2)</h2>
+        <h3>This is a Sub-heading (h3)</h3>
+        <p>
+          This is a standard paragraph (<code>&lt;p&gt;</code>). You can make
+          text <strong>bold and important</strong> using the
+          <code>&lt;strong&gt;</code> tag, or emphasize it with
+          <em>italics</em> using <code>&lt;em&gt;</code>. Here is underlined
+          text using <u>u</u>, and here is some
+          <mark>highlighted text</mark> using the mark tag.
+        </p>
+
+        <p>
+          You can also display <small>small fine print</small>, deleted
+          <del>old text</del>, and newly <ins>inserted text</ins>. For science
+          and math, we use subscripts like H<sub>2</sub>O and superscripts like
+          E = mc<sup>2</sup>.
+        </p>
+
+        <blockquote>
+          "This is a blockquote tag, perfect for quoting external sources, long
+          citations, or testimonials."
+          <cite>— The HTML Documentation</cite>
+        </blockquote>
+      </section>
+
+      <section id="lists">
+        <h2>Lists and Organization</h2>
+        <h4>Unordered List (Bullet Points)</h4>
+        <ul>
+          <li>First bullet point</li>
+          <li>Second bullet point</li>
+        </ul>
+
+        <h4>Ordered List (Numbered)</h4>
+        <ol>
+          <li>Step one: Open your code editor</li>
+          <li>Step two: Save as index.html</li>
+        </ol>
+
+        <h4>Description List (Key-Value Pairs)</h4>
+        <dl>
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language - the skeleton of the web.</dd>
+          <dt>CSS</dt>
+          <dd>Cascading Style Sheets - the styling and design of the web.</dd>
+        </dl>
+      </section>
+
+      <section id="media">
+        <h2>Images and Media</h2>
+        <figure>
+          <img
+            src="https://via.placeholder.com/400x150"
+            alt="Placeholder graphic showing dimensions 400x150"
+            width="400"
+            height="150" />
+          <figcaption>
+            Fig. 1 - A standard figure with an image caption.
+          </figcaption>
+        </figure>
+
+        <details>
+          <summary>Click to expand and see Audio & Video tags!</summary>
+          <p>Here is how you embed audio:</p>
+          <audio controls>
+            <source src="sample.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <p>Here is how you embed video:</p>
+          <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </details>
+      </section>
+
+      <section id="tables">
+        <h2>Data Tables</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tag Name</th>
+              <th>Category</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td>Container</td>
+              <td>Generic block-level division for styling</td>
+            </tr>
+            <tr>
+              <td><code>&lt;span&gt;</code></td>
+              <td>Container</td>
+              <td>Generic inline container for text chunks</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="forms">
+        <h2>Interactive Forms</h2>
+        <form action="#" method="POST">
+          <p>
+            <label for="username">Username:</label><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your name"
+              required />
+          </p>
+          <p>
+            <label for="email">Email Address:</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com" />
+          </p>
+          <p>
+            <label for="role">Choose your role:</label><br />
+            <select id="role" name="role">
+              <option value="student">Student</option>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+            </select>
+          </p>
+          <p>
+            <label for="bio">Short Bio:</label><br />
+            <textarea
+              id="bio"
+              name="bio"
+              rows="3"
+              cols="40"
+              placeholder="Tell us about yourself..."></textarea>
+          </p>
+          <p>
+            <input type="checkbox" id="terms" name="terms" />
+            <label for="terms">I agree to the terms and conditions</label>
+          </p>
+          <p>
+            <button type="submit">Submit Form</button>
+            <input type="reset" value="Reset Fields" />
+          </p>
+        </form>
+      </section>
+
+      <aside>
+        <h3>Pro-Tip Sidebar</h3>
+        <p>
+          Always use <strong>semantic tags</strong> like
+          <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and
+          <code>&lt;article&gt;</code> instead of just using endless
+          <code>&lt;div&gt;</code> tags. It greatly improves SEO and
+          screen-reader accessibility!
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 The HTML Reference Guide. Built with pure HTML5.</p>
+    </footer>
+  </body>
+</html>
