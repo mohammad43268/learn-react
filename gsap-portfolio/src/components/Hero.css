@@ -1,0 +1,57 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+/* Ensure overflow is hidden for the masking effect of the text reveal */
+.hero-title .word {
+  overflow: hidden;
+}
+
+.text-accent {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.hero-cta {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--trans-fast);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}

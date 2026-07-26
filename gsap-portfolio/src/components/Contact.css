@@ -1,0 +1,71 @@
+.contact-section {
+  padding: 10rem 0 2rem;
+  background-color: #050505;
+  position: relative;
+  z-index: var(--z-content);
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 4rem;
+}
+
+.magnetic-btn-wrapper {
+  padding: 2rem; /* Give space for the magnetic pull */
+  display: inline-block;
+  margin-bottom: 6rem;
+}
+
+.magnetic-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  will-change: transform;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links a {
+  transition: color var(--trans-fast);
+}
+
+.social-links a:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 767px) {
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}

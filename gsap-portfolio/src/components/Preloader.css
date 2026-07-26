@@ -1,0 +1,30 @@
+.preloader-container {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-color);
+  z-index: var(--z-preloader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.preloader-svg-path {
+  /* Setup for CSS stroke animation without DrawSVG */
+  stroke-dasharray: 400; /* Approximate path length */
+  stroke-dashoffset: 400; /* Start fully hidden */
+}
+
+.preloader-counter {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums; /* Prevents jumping widths */
+}
