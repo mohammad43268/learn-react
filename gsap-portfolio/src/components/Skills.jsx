@@ -17,23 +17,17 @@ export const Skills = () => {
       const scrollWidth = scrollContainerRef.current.scrollWidth;
       const amountToScroll = scrollWidth - window.innerWidth;
 
-      // Pin the section and translate X
       gsap.to(scrollContainerRef.current, {
         x: -amountToScroll,
         ease: "none",
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: `+=${amountToScroll}`, // Scroll distance equals width to scroll
+          end: `+=${amountToScroll}`,
           pin: true,
-          scrub: 1, // Smooth scrub
+          scrub: 1,
         }
       });
-    });
-
-    mm.add("(max-width: 767px)", () => {
-      // Mobile: standard vertical scroll for horizontal section
-      // No pin/translation needed. CSS will handle overflow-x scroll.
     });
 
     return () => mm.revert();
@@ -43,23 +37,24 @@ export const Skills = () => {
     <section className="skills-section" id="skills" ref={containerRef}>
       <div className="skills-horizontal-wrapper" ref={scrollContainerRef}>
         <div className="skills-panel">
-          <h2 className="skills-title">Process & Stack</h2>
+          <span className="section-badge">CORE STACK</span>
+          <h2 className="skills-title">Mathematical & 3D Engineering</h2>
         </div>
         <div className="skills-panel">
-          <h3 className="panel-heading text-accent">01 // Foundation</h3>
-          <p className="panel-text">React, Vue, TypeScript, Next.js, Nuxt.</p>
+          <h3 className="panel-heading text-accent">01 // WebGL & R3F</h3>
+          <p className="panel-text">React Three Fiber, Three.js, Custom GLSL Shaders, InstancedMesh, BufferGeometry.</p>
         </div>
         <div className="skills-panel">
-          <h3 className="panel-heading text-accent">02 // Motion</h3>
-          <p className="panel-text">GSAP, Lenis, Framer Motion, WebGL basics.</p>
+          <h3 className="panel-heading text-accent">02 // Numerical Algorithms</h3>
+          <p className="panel-text">RK4 Differential Solvers, 4D Stereographic Projections, Swarm Flocking Physics, Graph Theory.</p>
         </div>
         <div className="skills-panel">
-          <h3 className="panel-heading text-accent">03 // Styling</h3>
-          <p className="panel-text">CSS Variables, Tailwind, SCSS, CSS Modules.</p>
+          <h3 className="panel-heading text-accent">03 // Motion & Choreography</h3>
+          <p className="panel-text">GSAP Core, ScrollTrigger, Flip Plugin, MatchMedia, Lenis Smooth Scroll.</p>
         </div>
         <div className="skills-panel">
-          <h3 className="panel-heading text-accent">04 // Performance</h3>
-          <p className="panel-text">Lighthouse optimization, Asset delivery, Render cycles.</p>
+          <h3 className="panel-heading text-accent">04 // Audio Synthesis</h3>
+          <p className="panel-text">Web Audio API, Procedural Sound Synthesis, Biquad Filtering, Harmonic Oscillators.</p>
         </div>
       </div>
     </section>

@@ -3,55 +3,160 @@
   display: flex;
   align-items: center;
   position: relative;
-  z-index: var(--z-content);
+  padding-top: 5rem;
+  z-index: 10;
 }
 
 .hero-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1100px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #00f0ff;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+
+.hero-badge-icon {
+  animation: pulse-glow 2s infinite alternate;
 }
 
 .hero-title {
-  font-size: clamp(4rem, 8vw, 8rem);
-  line-height: 1;
-  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.8rem;
+  color: #ffffff;
 }
 
-/* Ensure overflow is hidden for the masking effect of the text reveal */
-.hero-title .word {
-  overflow: hidden;
-}
-
-.text-accent {
-  color: var(--accent-color);
-  font-style: italic;
+.hero-title .text-accent {
+  background: linear-gradient(135deg, #00f0ff 0%, #7000ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  color: var(--text-secondary);
-  max-width: 600px;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
 }
 
-.hero-cta {
-  margin-top: 2rem;
+.hero-quick-toggles {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.toggle-lead {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.45);
+  margin-right: 0.4rem;
+}
+
+.quick-chip {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.quick-chip:hover {
+  background: rgba(0, 240, 255, 0.2);
+  border-color: #00f0ff;
+  color: #00f0ff;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.875rem;
-  position: relative;
-  overflow: hidden;
-  transition: all var(--trans-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #00f0ff;
+  color: #05070f;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
+  background: #ffffff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1.6rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: #00f0ff;
+  color: #00f0ff;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.scroll-arrow-anim {
+  animation: bounce-down 2s infinite ease-in-out;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }

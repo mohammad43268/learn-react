@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 :root {
-  /* Cinematic Dark Theme */
-  --bg-color: #050505;
-  --text-primary: #e5e5e5;
-  --text-secondary: #888888;
-  --accent-color: #d4af37; /* Cinematic Gold */
+  /* Sci-Fi / Cybernetic Dark Theme */
+  --bg-color: #05070f;
+  --text-primary: #f0f4fc;
+  --text-secondary: #94a3b8;
+  --accent-color: #00f0ff;
+  --accent-purple: #7000ff;
+  --accent-green: #00ffaa;
   
-  --border-color: rgba(255, 255, 255, 0.1);
-  --grid-line: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(8, 12, 24, 0.7);
 
   /* Typography */
-  --font-display: 'Playfair Display', serif;
+  --font-display: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
   
   /* Layout */
   --container-pad: 2rem;
@@ -20,21 +23,20 @@
   /* Z-index layers */
   --z-preloader: 100;
   --z-cursor: 99;
+  --z-studio: 80;
   --z-nav: 50;
+  --z-hud: 45;
   --z-content: 10;
-  
-  /* Micro-interactions transition */
-  --trans-fast: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --z-canvas: 1;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none; /* Hide default cursor for custom cursor */
+  cursor: none;
 }
 
-/* Reduced Motion Fallback */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -44,20 +46,7 @@
   }
 }
 
-html.lenis {
-  height: auto;
-}
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-body {
+html, body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -67,10 +56,30 @@ body {
   overflow-x: hidden;
 }
 
+.fixed-3d-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-canvas, 1);
+  pointer-events: auto;
+}
+
+.content-scroller {
+  position: relative;
+  z-index: var(--z-content, 10);
+  pointer-events: none; /* Let 3D canvas receive pointer events except on interactive elements */
+}
+
+.content-scroller * {
+  pointer-events: auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: 1.15;
   margin: 0;
 }
 
@@ -88,12 +97,40 @@ button {
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 var(--container-pad);
 }
 
-/* Global utility for hiding elements initially for GSAP */
-.gsap-reveal {
-  visibility: hidden;
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* Lenis scroll */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05070f;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.6);
 }

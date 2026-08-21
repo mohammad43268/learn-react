@@ -1,0 +1,56 @@
+.telemetry-overlay {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(5, 7, 15, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 45;
+  font-family: monospace;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.telemetry-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.telemetry-label {
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+}
+
+.telemetry-val {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.text-neon {
+  color: #00ffaa !important;
+  text-shadow: 0 0 8px rgba(0, 255, 170, 0.5);
+}
+
+.telemetry-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+  .telemetry-overlay {
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
